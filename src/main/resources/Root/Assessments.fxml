@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.school_magazine.controllers.root.assessments.AssessmentsController">
+   <children>
+      <ComboBox fx:id="comboSubject" onAction="#update" layoutX="34.0" layoutY="39.0" prefWidth="175.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="60.0" />
+      <ListView fx:id="listAssessments" layoutX="34.0" layoutY="78.0" prefHeight="223.0" prefWidth="175.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="100.0" />
+   </children>
+</AnchorPane>

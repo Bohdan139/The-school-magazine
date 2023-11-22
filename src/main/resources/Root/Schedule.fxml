@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school_magazine.controllers.root.schedule.ScheduleController">
+   <children>
+      <TableView fx:id="table" layoutX="56.0" layoutY="71.0" prefHeight="234.0" prefWidth="378.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="75.0">
+        <columns>
+          <TableColumn fx:id="cMonday" minWidth="25.0" prefWidth="75.0" text="Понеділок" />
+          <TableColumn fx:id="cTuesday" minWidth="25.0" prefWidth="75.0" text="Вівторок" />
+            <TableColumn fx:id="cWednesday" prefWidth="75.0" text="Середа" />
+            <TableColumn fx:id="cThursday" prefWidth="75.0" text="Четверг" />
+            <TableColumn fx:id="cFriday" prefWidth="75.0" text="П'ятниця" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!---->
+
+<AnchorPane fx:id="root" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school_magazine.controllers.root.profile.ProfileController" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.rightAnchor="0.0">
+   <children>
+      <VBox layoutX="34.0" layoutY="39.0" prefHeight="299.0" prefWidth="548.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="Прізвище" />
+                  <Label fx:id="textFirstName"/>
+                  <Button onAction="#changeFirstName" mnemonicParsing="false" stylesheets="@../Style/MainStyle.css" text="Змінити" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="Ім'я" />
+                  <Label fx:id="textLastName"/>
+                  <Button onAction="#changeLastName" mnemonicParsing="false" stylesheets="@../Style/MainStyle.css" text="Змінити" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Label text="По батькові" />
+                  <Label fx:id="textPatronymic"/>
+                  <Button onAction="#changePatronymic" mnemonicParsing="false" stylesheets="@../Style/MainStyle.css" text="Змінити" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="Логін" />
+                  <Label fx:id="textLoggin"/>
+                  <Button onAction="#changeLoggin" mnemonicParsing="false" stylesheets="@../Style/MainStyle.css" text="Змінити" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="Пароль" />
+                  <Label fx:id="textPassword"/>
+                  <Button onAction="#changePassword" mnemonicParsing="false" stylesheets="@../Style/MainStyle.css" text="Змінити" />
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

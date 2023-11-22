@@ -1,0 +1,12 @@
+
+
+.button{
+    -fx-pref-height: 20px;
+    -fx-pref-width: 80px;
+    -fx-font-size: 10px;
+    -fx-border-color: #000;
+    -fx-background-color: #fff;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    
+}

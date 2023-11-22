@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="468.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.school_magazine.controllers.root.RootController">
+   <children>
+      <AnchorPane prefHeight="60.0" style="-fx-border-color: #000; -fx-border-width: 2;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="labelTitle" alignment="CENTER" contentDisplay="CENTER" layoutX="370.0" layoutY="14.0" text="Головна" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button id="reconnnectionButton" layoutX="710.0" layoutY="18.0" mnemonicParsing="false" onAction="#toReconnect" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-width: 2; -fx-border-radius: 5; -fx-font-size: 10;" text="Перепідключення" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="15.0" />
+         </children></AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutY="268.0" prefHeight="403.0" prefWidth="120.0" spacing="20.0" style="-fx-border-color: #000; -fx-border-width: 2;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="65.0">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#toProfile" stylesheets="@Style/MainStyle.css" text="Профіль" />
+            <Button mnemonicParsing="false" onAction="#toSchedule" stylesheets="@Style/MainStyle.css" text="Розклад" />
+            <Button mnemonicParsing="false" onAction="#toAssessments" stylesheets="@Style/MainStyle.css" text="Оцінки" />
+         </children></VBox>
+      <AnchorPane fx:id="centerScene" layoutX="586.0" layoutY="268.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #000; -fx-border-width: 2;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0">
+         </AnchorPane>
+   </children>
+</AnchorPane>
