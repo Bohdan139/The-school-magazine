@@ -11,8 +11,8 @@ import javafx.stage.Stage;
 public class DBConnector {
 
     static private final String url = "jdbc:mysql://localhost:3306";
-    static private final String login = "root";
-    static private final String password = "MyRoot123";
+    static private final String login = "NewUser";
+    static private final String password = "12345";
 
     static Connection connection = null;
 
