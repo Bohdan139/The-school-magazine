@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `example` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `example`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: example
@@ -34,7 +32,7 @@ CREATE TABLE `assessments` (
   KEY `a_school_subject_id_fk` (`school_subject_id`),
   CONSTRAINT `a_school_subject_id_fk` FOREIGN KEY (`school_subject_id`) REFERENCES `school_subject` (`id`),
   CONSTRAINT `a_users_id_fk` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +41,7 @@ CREATE TABLE `assessments` (
 
 LOCK TABLES `assessments` WRITE;
 /*!40000 ALTER TABLE `assessments` DISABLE KEYS */;
-INSERT INTO `assessments` VALUES (1,12,9,1),(2,10,9,1),(3,12,9,1),(4,8,9,3),(5,11,9,5);
+INSERT INTO `assessments` VALUES (7,12,12,1),(8,12,12,2),(9,12,12,1),(10,11,12,2),(11,12,12,3),(12,10,12,4),(13,10,15,1),(14,9,15,2),(15,11,15,6),(16,8,15,9),(17,2,15,3),(18,12,15,4),(19,12,16,1),(20,12,16,2),(21,12,16,3),(22,12,16,4),(23,12,16,5),(24,12,16,6),(25,12,16,7),(26,12,16,8),(27,12,16,9),(28,12,16,10);
 /*!40000 ALTER TABLE `assessments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -69,6 +67,82 @@ LOCK TABLES `class` WRITE;
 /*!40000 ALTER TABLE `class` DISABLE KEYS */;
 INSERT INTO `class` VALUES (1,'10'),(2,'11'),(3,'9');
 /*!40000 ALTER TABLE `class` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schedule_10`
+--
+
+DROP TABLE IF EXISTS `schedule_10`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `schedule_10` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `monday` bigint DEFAULT NULL,
+  `tuesday` bigint DEFAULT NULL,
+  `wednesday` bigint DEFAULT NULL,
+  `thursday` bigint DEFAULT NULL,
+  `friday` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `monday_fk_10` (`monday`),
+  KEY `tuesday_fk_10` (`tuesday`),
+  KEY `wednesday_fk_10` (`wednesday`),
+  KEY `thursday_fk_10` (`thursday`),
+  KEY `friday_fk_10` (`friday`),
+  CONSTRAINT `friday_fk_10` FOREIGN KEY (`friday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `monday_fk_10` FOREIGN KEY (`monday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `thursday_fk_10` FOREIGN KEY (`thursday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `tuesday_fk_10` FOREIGN KEY (`tuesday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `wednesday_fk_10` FOREIGN KEY (`wednesday`) REFERENCES `school_subject` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schedule_10`
+--
+
+LOCK TABLES `schedule_10` WRITE;
+/*!40000 ALTER TABLE `schedule_10` DISABLE KEYS */;
+INSERT INTO `schedule_10` VALUES (1,9,1,5,8,2),(2,7,2,2,9,6),(3,3,3,4,10,7),(4,8,4,6,1,8),(5,10,5,8,3,5),(6,6,7,NULL,3,2),(7,4,NULL,NULL,NULL,1);
+/*!40000 ALTER TABLE `schedule_10` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schedule_11`
+--
+
+DROP TABLE IF EXISTS `schedule_11`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `schedule_11` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `monday` bigint DEFAULT NULL,
+  `tuesday` bigint DEFAULT NULL,
+  `wednesday` bigint DEFAULT NULL,
+  `thursday` bigint DEFAULT NULL,
+  `friday` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `monday_fk_11` (`monday`),
+  KEY `tuesday_fk_11` (`tuesday`),
+  KEY `wednesday_fk_11` (`wednesday`),
+  KEY `thursday_fk_11` (`thursday`),
+  KEY `friday_fk_11` (`friday`),
+  CONSTRAINT `friday_fk_11` FOREIGN KEY (`friday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `monday_fk_11` FOREIGN KEY (`monday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `thursday_fk_11` FOREIGN KEY (`thursday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `tuesday_fk_11` FOREIGN KEY (`tuesday`) REFERENCES `school_subject` (`id`),
+  CONSTRAINT `wednesday_fk_11` FOREIGN KEY (`wednesday`) REFERENCES `school_subject` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schedule_11`
+--
+
+LOCK TABLES `schedule_11` WRITE;
+/*!40000 ALTER TABLE `schedule_11` DISABLE KEYS */;
+INSERT INTO `schedule_11` VALUES (1,3,2,9,2,2),(2,1,3,5,9,6),(3,6,4,3,1,7),(4,5,5,7,10,8),(5,10,6,8,7,5),(6,8,NULL,1,4,2),(7,9,NULL,10,2,NULL);
+/*!40000 ALTER TABLE `schedule_11` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -120,7 +194,7 @@ CREATE TABLE `school_subject` (
   `id` bigint NOT NULL AUTO_INCREMENT,
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +203,7 @@ CREATE TABLE `school_subject` (
 
 LOCK TABLES `school_subject` WRITE;
 /*!40000 ALTER TABLE `school_subject` DISABLE KEYS */;
-INSERT INTO `school_subject` VALUES (1,'Математика'),(2,'Українська мова'),(3,'Історія України'),(4,'Всесвітня історія'),(5,'Хімія'),(6,'Українстька література'),(7,'Біологія'),(8,'Географія'),(9,'Англійська мова');
+INSERT INTO `school_subject` VALUES (1,'Математика'),(2,'Українська мова'),(3,'Історія України'),(4,'Всесвітня історія'),(5,'Хімія'),(6,'Українстька література'),(7,'Біологія'),(8,'Географія'),(9,'Англійська мова'),(10,'Фізика');
 /*!40000 ALTER TABLE `school_subject` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,7 +226,7 @@ CREATE TABLE `students` (
   KEY `class_id_fk` (`class_id`),
   CONSTRAINT `class_id_fk` FOREIGN KEY (`class_id`) REFERENCES `class` (`id`),
   CONSTRAINT `users_id_fk` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +235,7 @@ CREATE TABLE `students` (
 
 LOCK TABLES `students` WRITE;
 /*!40000 ALTER TABLE `students` DISABLE KEYS */;
-INSERT INTO `students` VALUES (1,'gun','don',4,1,'ass'),(2,'gun','don',4,1,'ass'),(10,'00','000',2,3,'000'),(11,'Фисак','Богдан',9,3,'Романович'),(12,'Іван','Іван',10,2,'Іванович');
+INSERT INTO `students` VALUES (13,'Фисак','Богдан',12,2,'Романович'),(16,'Порошенко','Петро',15,1,'Олексіївич'),(17,'Бандера','Степан',16,3,'Андрійович');
 /*!40000 ALTER TABLE `students` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -177,7 +251,7 @@ CREATE TABLE `users` (
   `loggin` varchar(64) NOT NULL,
   `password` varchar(64) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -186,7 +260,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'login','password'),(2,'1','2'),(3,'login','notpassword'),(4,'1','3'),(9,'123','123'),(10,'ivan','ivan');
+INSERT INTO `users` VALUES (12,'123','123'),(15,'loggin','password'),(16,'12345','12345');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -199,4 +273,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-23 16:28:17
+-- Dump completed on 2023-11-23 18:53:52
